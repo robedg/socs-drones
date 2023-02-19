@@ -27,7 +27,6 @@ for i in range(1,max_clusters+1):
             distance_sums[i-1] += 999999
     centers.append(kmeans.cluster_centers_) 
 
-print(distance_sums)
 for index in range(len(distance_sums)):
     if distance_sums[index] + (index + 1)*2500 < distance_sums[minimum_index] + (minimum_index + 1)*2500:
         minimum_index = index
